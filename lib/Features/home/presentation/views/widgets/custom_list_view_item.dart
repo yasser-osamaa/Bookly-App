@@ -1,4 +1,3 @@
-
 import 'package:bookly/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
@@ -16,6 +15,7 @@ class CustomListViewItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
             color: Colors.red,
             image: const DecorationImage(
+              fit: BoxFit.fill,
               image: AssetImage(
                 AssetsData.testImg,
               ),
