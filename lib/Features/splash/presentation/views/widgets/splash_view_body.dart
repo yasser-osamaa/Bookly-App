@@ -66,7 +66,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     Future.delayed(
       const Duration(seconds: 2),
       () {
-        Get.to(
+        Get.off(
           () => const HomeView(),
           transition: Transition.fade,
           duration: kTransitionDuration,
