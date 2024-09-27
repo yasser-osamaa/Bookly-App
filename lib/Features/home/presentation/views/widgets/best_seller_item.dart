@@ -40,7 +40,7 @@ class BestSellerListItem extends StatelessWidget {
                   SizedBox(
                     width: MediaQuery.of(context).size.width * .5,
                     child: Text(
-                      'Harry Potter And The Goblen of Fire',
+                      'Harry Potter And The Goblet of Fire',
                       style: Styles.textStyle20.copyWith(fontFamily: kFontGt),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
