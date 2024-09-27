@@ -1,4 +1,5 @@
 import 'package:bookly/core/utils/assets.dart';
+import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class BestSellerListItem extends StatelessWidget {
@@ -27,6 +28,22 @@ class BestSellerListItem extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(
+              width: 30,
+            ),
+            Column(
+              children: [
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * .5,
+                  child: const Text(
+                    'Harry Potter And The Goblen of Fire',
+                    style: Styles.textStyle20,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                )
+              ],
+            )
           ],
         ),
       ),
