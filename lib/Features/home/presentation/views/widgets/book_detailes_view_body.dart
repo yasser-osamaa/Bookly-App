@@ -1,5 +1,7 @@
 import 'package:bookly/Features/home/presentation/views/widgets/custom_book_detailes_app_bar.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_book_image.dart';
+import 'package:bookly/Features/home/presentation/views/widgets/rating_book.dart';
+import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailesViewBody extends StatelessWidget {
@@ -15,11 +17,36 @@ class BookDetailesViewBody extends StatelessWidget {
           height: 30,
         ),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: width * .2),
+          padding: EdgeInsets.symmetric(horizontal: width * .23),
           child: const CustomBookImage(),
         ),
         const SizedBox(
-          height: 30,
+          height: 40,
+        ),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: width * .2),
+          child: const Text(
+            'Harry Potter And The Goblet of Fire',
+            style: Styles.textStyle30,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+          ),
+        ),
+        const SizedBox(
+          height: 6,
+        ),
+        Text(
+          'J.K.Rowing',
+          style: Styles.textStyle18.copyWith(
+            fontStyle: FontStyle.italic,
+            color: Colors.white.withOpacity(.7),
+          ),
+        ),
+        const SizedBox(
+          height: 12,
+        ),
+        const RatingBook(
+          mainAxisAlignment: MainAxisAlignment.center,
         ),
       ],
     );
