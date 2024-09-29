@@ -1,4 +1,4 @@
-import 'package:bookly/Features/home/presentation/views/widgets/custom_list_view_item.dart';
+import 'package:bookly/Features/home/presentation/views/widgets/custom_book_image.dart';
 import 'package:flutter/material.dart';
 
 class FeatureBooksListView extends StatelessWidget {
@@ -18,7 +18,7 @@ class FeatureBooksListView extends StatelessWidget {
               padding: EdgeInsets.only(
                 right: 12,
               ),
-              child: FeatureListViewItem(),
+              child: CustomBookImage(),
             );
           },
         ),
