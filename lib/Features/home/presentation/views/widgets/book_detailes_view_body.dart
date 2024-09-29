@@ -1,3 +1,4 @@
+import 'package:bookly/Features/home/presentation/views/widgets/button_book_actions.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_book_detailes_app_bar.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_book_image.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/rating_book.dart';
@@ -14,7 +15,7 @@ class BookDetailesViewBody extends StatelessWidget {
       children: [
         const CustomBookDetailesAppBar(),
         const SizedBox(
-          height: 30,
+          height: 20,
         ),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * .23),
@@ -26,7 +27,7 @@ class BookDetailesViewBody extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * .2),
           child: const Text(
-            'Harry Potter And The Goblet of Fire',
+            'The Jungle Book',
             style: Styles.textStyle30,
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
@@ -48,6 +49,10 @@ class BookDetailesViewBody extends StatelessWidget {
         const RatingBook(
           mainAxisAlignment: MainAxisAlignment.center,
         ),
+        const SizedBox(
+          height: 30,
+        ),
+        const ButtonBookAction(),
       ],
     );
   }
