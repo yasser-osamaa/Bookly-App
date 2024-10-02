@@ -13,23 +13,31 @@ class ServerFailure extends Failures {
     switch (dioException.type) {
       case DioExceptionType.connectionTimeout:
         return ServerFailure(errMsg: 'Connection time Out with Api Server');
+
       case DioExceptionType.sendTimeout:
         return ServerFailure(errMsg: 'Send time Out with Api Server');
+
       case DioExceptionType.receiveTimeout:
         return ServerFailure(errMsg: 'Receive time Out with Api Server');
+
       case DioExceptionType.badCertificate:
         return ServerFailure(
             errMsg: 'Browser fails to validate your certificate');
+
       case DioExceptionType.cancel:
         return ServerFailure(errMsg: 'Request was canceld');
+
       case DioExceptionType.connectionError:
         return ServerFailure(errMsg: 'No Internet Connection');
+
       case DioExceptionType.unknown:
         return ServerFailure(
             errMsg: 'Oops There was An Error, Please try again');
+
       case DioExceptionType.badResponse:
         return ServerFailure.fromBadResponse(
             dioException.response!.statusCode!, dioException.response!.data);
+
       default:
         return ServerFailure(
             errMsg: 'Oops There was An Error, Please try again');
