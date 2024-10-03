@@ -6,10 +6,13 @@ import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 
 class HomeRepoImpl implements HomeRepo {
+  final ApiServiec apiServiec;
+
+  HomeRepoImpl({required this.apiServiec});
   @override
   Future<Either<Failures, List<BookModel>>> fetchNewestBooks() async {
     try {
-      var data = await ApiServiec(Dio()).get(
+      var data = await apiServiec.get(
           endPoint:
               'volumes?q=subject:Science Fiction&Filtering=free-ebooks&Sorting=newest');
       List<BookModel> books = [];

@@ -5,8 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 part 'feature_books_state.dart';
 
-class FeatureBooksCubitCubit extends Cubit<FeatureBooksCubitState> {
-  FeatureBooksCubitCubit({required this.homeRepo})
+class FeatureBooksCubit extends Cubit<FeatureBooksState> {
+  FeatureBooksCubit({required this.homeRepo})
       : super(FeatureBooksCubitInitial());
   final HomeRepo homeRepo;
   Future<void> fetchFetureBooks() async {
