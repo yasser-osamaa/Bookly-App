@@ -18,14 +18,18 @@ class SimilerBooksListView extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(left: 18),
               child: ListView.builder(
+                physics: const BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 itemCount: 10,
                 itemBuilder: (context, index) {
-                  return const Padding(
-                    padding: EdgeInsets.only(
+                  return Padding(
+                    padding: const EdgeInsets.only(
                       right: 12,
                     ),
-                    child: CustomBookImage(imgUrl: ''),
+                    child: CustomBookImage(
+                        imgUrl: state.books[index].volumeInfo?.imageLinks
+                                ?.thumbnail ??
+                            ''),
                   );
                 },
               ),
