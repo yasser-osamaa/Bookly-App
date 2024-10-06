@@ -14,8 +14,8 @@ class BookDetailesView extends StatefulWidget {
 class _BookDetailesViewState extends State<BookDetailesView> {
   @override
   void initState() {
-    BlocProvider.of<SimilerBooksCubit>(context)
-        .fetchSimilerBooks(category: widget.book.volumeInfo!.categories![0]);
+    BlocProvider.of<SimilerBooksCubit>(context).fetchSimilerBooks(
+        category: widget.book.volumeInfo!.categories?[0] ?? 'general');
     super.initState();
   }
 
