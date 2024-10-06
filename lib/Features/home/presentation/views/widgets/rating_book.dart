@@ -33,7 +33,7 @@ class RatingBook extends StatelessWidget {
           width: 5,
         ),
         Text(
-          "$count",
+          "($count)",
           style: Styles.textStyle14.copyWith(
             fontWeight: FontWeight.w600,
             color: Colors.white.withOpacity(.5),
