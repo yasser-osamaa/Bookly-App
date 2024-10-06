@@ -27,8 +27,9 @@ class FeatureBooksListView extends StatelessWidget {
                       right: 12,
                     ),
                     child: CustomBookImage(
-                      imgUrl:
-                          state.books[index].volumeInfo!.imageLinks!.thumbnail!,
+                      imgUrl: state
+                              .books[index].volumeInfo?.imageLinks?.thumbnail ??
+                          '',
                     ),
                   );
                 },
