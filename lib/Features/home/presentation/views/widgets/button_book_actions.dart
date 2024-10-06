@@ -27,7 +27,7 @@ class ButtonBookAction extends StatelessWidget {
             child: CustomButton(
               backGroundColor: Color(0xffEF8262),
               textColor: Colors.white,
-              text: 'Free Preview',
+              text: 'Preview',
               fontSize: 16,
               borderRadius: BorderRadius.only(
                 topRight: Radius.circular(16),
