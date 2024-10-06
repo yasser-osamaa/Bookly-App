@@ -31,6 +31,7 @@ class BookDetailesSection extends StatelessWidget {
             style: Styles.textStyle30,
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
+            textAlign: TextAlign.center,
           ),
         ),
         const SizedBox(
